@@ -42,13 +42,13 @@ with open(filename) as csv_file:
             greatest_loss = difference
             greatest_loss_date = current_date
 #printing results
-print("Financial Analysis")
-print("------------------------------")
-print(f"Total Months: {total_months}")
-print(f"Total:  ${net_total}")
-print(f"Average Change: ${round(profit_loss_changes/(total_months-1), 2)}")
-print(f"Greatest Increase in Profits: {greatest_profit_date} (${greatest_profit})")
-print(f"Greatest Decrease in Profits: {greatest_loss_date} (${greatest_loss})")
+print("Financial Analysis\n")
+print("------------------------------\n")
+print(f"Total Months: {total_months}\n")
+print(f"Total:  ${net_total}\n")
+print(f"Average Change: ${round(profit_loss_changes/(total_months-1), 2)}\n")
+print(f"Greatest Increase in Profits: {greatest_profit_date} (${greatest_profit})\n")
+print(f"Greatest Decrease in Profits: {greatest_loss_date} (${greatest_loss})\n")
 #creating and printing results to a .txt file
 with open("PyBank_Data_Analysis.txt", "w")as out_file:
     out_file.write("Financial Analysis\n")
@@ -59,4 +59,3 @@ with open("PyBank_Data_Analysis.txt", "w")as out_file:
     out_file.write(f'Average Change: ${round(profit_loss_changes/(total_months-1), 2)}\n')
     out_file.write(f"Greatest Increase in Profits: {greatest_profit_date} (${greatest_profit})\n")
     out_file.write(f"Greatest Decrease in Profits: {greatest_loss_date} (${greatest_loss})")
-
